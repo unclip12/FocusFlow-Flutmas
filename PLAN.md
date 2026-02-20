@@ -11,11 +11,21 @@ FocusFlow Flutmas is a mobile-first migration of the FocusFlow web app, built wi
 - **Design System:** Material 3
 
 ## Phase 1: Analysis & Mapping
-- [ ] Analyze React architecture
-- [ ] Map Task Management logic
-- [ ] Map Timer/Pomodoro logic
-- [ ] Map Analytics/Statistics logic
+- [x] Analyze React architecture
+- [x] Map Task Management logic
+- [x] Map Timer/Pomodoro logic
+- [x] Map Analytics/Statistics logic
 - [ ] Define Flutter project structure
+
+### Architectural Mapping (React -> Flutter)
+| Feature | Web (React) | Mobile (Flutter) |
+| :--- | :--- | :--- |
+| **State Management** | React Hooks / Context | Riverpod (StateNotifier/AsyncNotifier) |
+| **Local Storage** | IndexedDB / LocalStorage | Hive (NoSQL, high performance) |
+| **Logic Services** | TypeScript Services | Dart Service Classes / Repositories |
+| **UI Components** | Tailwind CSS / TSX | Flutter Widgets (Material 3) |
+| **Animations** | CSS / Framer Motion | Flutter Animation Controller / Implicit Animations |
+| **SRS Logic** | `srsService.ts` | `SrsRepository` / `SrsUseCase` |
 
 ## Phase 2: Core Infrastructure
 - [ ] Initialize Flutter project
